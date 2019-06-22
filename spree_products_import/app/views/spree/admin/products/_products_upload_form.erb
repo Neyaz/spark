@@ -1,0 +1,4 @@
+<%= form_tag batch_upload_admin_products_url, method: :post, multipart: true do %>
+  <%= file_field_tag 'products_file', accept: 'csv' %>
+  <%= button Spree.t('actions.upload'), 'refresh', 'submit', {class: 'btn-success', data: { disable_with: "#{ Spree.t(:load) }..." }} %>
+<% end %>
